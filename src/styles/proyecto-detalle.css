@@ -1,0 +1,400 @@
+/* ============================================
+   RESET DEL FULLPAGE PARA PÁGINAS DE DETALLE
+   Estas reglas DESACTIVAN el fullpage scroll
+   solo en las páginas de detalle de proyecto.
+   ============================================ */
+
+
+/* ============================================
+   PÁGINA DE DETALLE DE PROYECTO
+   ============================================ */
+
+body.project-detail-page {
+    overflow-y: auto !important;
+    scroll-snap-type: none !important;
+}
+
+body.project-detail-page .project-detail {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+main{
+    padding: 20px;
+}
+.project-detail{
+    padding: 50px 0 0 0;
+}
+/* ============================================
+   HERO DEL PROYECTO
+   ============================================ */
+.pd-hero {
+    position: relative;
+    padding: 20px 0;
+}   
+
+.pd-hero__bg {
+    position: relative;
+    height: 380px;
+    border-radius: var(--radius);
+    background: var(--pd-tint, #222);
+    overflow: hidden;
+}
+
+.pd-hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+}
+
+.pd-hero__content {
+    position: relative;
+    margin: -90px 24px 0;
+    padding: 32px;
+    border-radius: 20px;
+    background: rgba(20, 20, 28, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pd-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin: 12px 0;
+}
+
+.pd-hero__subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.pd-hero__actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   TECH TAGS
+   ============================================ */
+.pd-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+}
+
+.pd-tech li {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   SECCIONES
+   ============================================ */
+.pd-section {
+    padding: 32px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    height: auto;
+}
+
+
+.pd-section p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.pd-section p:last-child {
+    margin-bottom: 0;
+}
+
+.pd-section__title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    color: white;
+}
+
+/* ============================================
+   GALERÍA MÓVIL — MOCKUP DE CELULAR
+   ============================================ */
+.pd-gallery {
+    display: grid;
+    gap: 26px;
+}
+
+.pd-gallery--mobile {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-items: center;
+}
+
+.pd-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    width: 100%;
+    max-width: 260px;
+}
+
+.pd-phone__frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 19.5;
+    background: #0b0b10;
+    border: 8px solid #1c1c22;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.08),
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.pd-phone__frame:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.15),
+        0 30px 60px rgba(236, 23, 137, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.pd-phone__notch {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42%;
+    height: 18px;
+    background: #0b0b10;
+    border-radius: 0 0 14px 14px;
+    z-index: 2;
+}
+
+.pd-phone__frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pd-phone figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+/* ============================================
+   GALERÍA WEB — MOCKUP DE PC
+   ============================================ */
+.pd-gallery--web {
+    grid-template-columns: 1fr;
+}
+
+.pd-desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    width: 100%;
+}
+
+.pd-desktop__frame {
+    position: relative;
+    width: 100%;
+    background: #0b0b10;
+    border: 10px solid #1c1c22;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.08),
+        0 25px 50px rgba(0, 0, 0, 0.45),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.pd-desktop__frame:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.15),
+        0 35px 70px rgba(236, 23, 137, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Barra superior con los 3 puntos (tipo navegador/macOS) */
+.pd-desktop__bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    background: linear-gradient(180deg, #26262c 0%, #1a1a20 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pd-desktop__bar span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+}
+
+.pd-desktop__bar span:nth-child(1) {
+    background: #ff5f57;
+}
+
+.pd-desktop__bar span:nth-child(2) {
+    background: #febc2e;
+}
+
+.pd-desktop__bar span:nth-child(3) {
+    background: #28c840;
+}
+
+.pd-desktop__frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    background: #0b0b10;
+}
+
+.pd-desktop figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+/* ============================================
+   FEATURES
+   ============================================ */
+.pd-features {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.pd-features li {
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--pink, #ec1789);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+/* ============================================
+   NAVEGACIÓN ENTRE PROYECTOS
+   ============================================ */
+.pd-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.pd-nav__link {
+    padding: 14px 24px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-weight: 500;
+    color: white;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(10px);
+}
+
+.pd-nav__link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 700px) {
+    body.project-detail-page .project-detail {
+        padding: 90px 16px 40px;
+    }
+
+    .pd-hero__bg {
+        height: 220px;
+    }
+
+    .pd-hero__content {
+        margin: -60px 12px 0;
+        padding: 22px;
+    }
+
+    .pd-section {
+        padding: 22px;
+    }
+
+    /* En móvil mostramos 1 o 2 celulares por fila */
+    .pd-gallery--mobile {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
+
+    .pd-phone {
+        max-width: 220px;
+    }
+
+    /* El mockup de PC se adapta al ancho del contenedor */
+    .pd-desktop__frame {
+        border-width: 8px;
+        border-radius: 12px;
+    }
+
+    .pd-desktop__bar {
+        padding: 8px 12px;
+    }
+
+    .pd-desktop__bar span {
+        width: 8px;
+        height: 8px;
+    }
+
+    .pd-nav {
+        flex-direction: column;
+    }
+
+    .pd-nav__link {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .pd-phone {
+        max-width: 200px;
+    }
+}
