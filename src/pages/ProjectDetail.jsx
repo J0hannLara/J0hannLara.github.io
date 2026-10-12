@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import { projects, getProjectBySlug } from "../data/projects";
+import Seo from "../components/ui/Seo";
 
 function ProjectDetail() {
   const { slug } = useParams();
@@ -41,7 +42,7 @@ function ProjectDetail() {
 
   return (
     <>
-
+      <Seo title={project.title} description={project.shortDescription} image={project.heroImage} />
       <main className="project-detail">
         {/* ═══════════════ HERO ═══════════════ */}
         <section className="pd-hero">
@@ -106,11 +107,10 @@ function ProjectDetail() {
             <h2 className="pd-section__title">// Capturas</h2>
 
             <div
-              className={`pd-gallery ${
-                project.galleryType === "mobile"
+              className={`pd-gallery ${project.galleryType === "mobile"
                   ? "pd-gallery--mobile"
                   : "pd-gallery--web"
-              }`}
+                }`}
             >
               {project.gallery.map((capture, i) => (
                 <figure
