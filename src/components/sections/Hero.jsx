@@ -4,8 +4,8 @@ function Hero() {
 
   const stats = [
     { number: "Full Stack", label: "Web & Mobile" },
-    { number: "IA + RAG", label: "Soluciones inteligentes" },
     { number: "BO", label: "Tecnología con impacto local" },
+    { number: "Arquitectura", label: "Clean Arquitecture" },
   ];
 
   return (

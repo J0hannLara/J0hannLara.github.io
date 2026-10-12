@@ -30,8 +30,8 @@ export const skills = [
     icon: reactIcon,
     title: "JavaScript / React",
     description: "Frontend web interactivo y moderno",
-    level: 88,
-    levelLabel: "Avanzado",
+    level: 58,
+    levelLabel: "Medio",
     invertIcon: false,
   },
   {
@@ -57,8 +57,8 @@ export const skills = [
     icon: aiIcon,
     title: "IA / RAG / Ollama",
     description: "Inteligencia artificial aplicada",
-    level: 80,
-    levelLabel: "Especialización",
+    level: 50,
+    levelLabel: "Medio",
     invertIcon: true, // ← el que tenía filter: invert()
   },
 ];

@@ -1,15 +1,15 @@
+import photo from "../../assets/fotoCV.png";
 function About() {
     return (
         <section id="sobre-mi" class="section">
             <div class="section__head">
                 <p class="eyebrow">// quién soy</p>
                 <h2 class="section__title">Sobre mí</h2>
-                <p class="section__subtitle">Contenido aquí</p>
             </div>
 
             <div class="about">
                 <div class="about__photo glass">
-                    <img src="/src/assets/fotoCV.png" alt="" width="100%"></img>
+                    <img src={photo} alt="" width="100%"></img>
                 </div>
                 <div class="about__text glass">
                     <p>Johann Branco Lara Ortega</p>
@@ -27,7 +27,7 @@ function About() {
                         <div class="fact">
                             <span class="fact__label">Idiomas</span>
                             <span class="fact__value">Español</span>
-                            <span class="fact__value">Inglés Técnico</span>
+                            <span class="fact__value">Inglés A2</span>
                         </div>
                         <div class="fact">
                             <span class="fact__label">Especialidades</span>
