@@ -41,7 +41,6 @@ function ProjectDetail() {
 
   return (
     <>
-      <Navbar variant="page" />
 
       <main className="project-detail">
         {/* ═══════════════ HERO ═══════════════ */}
